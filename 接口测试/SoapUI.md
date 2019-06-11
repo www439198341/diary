@@ -1,0 +1,6 @@
+### 1. [生成wsdl文件](http://note.youdao.com/noteshare?id=a04f0b5e486cfaad0ade5517b61e6cd8)
+### 2. [SoapUI测试webservice](http://note.youdao.com/noteshare?id=f7e3facd6ce8151fcc8e4658d494d606)
+### 3. [SoapUI REST接口项目](http://note.youdao.com/noteshare?id=3f7ebd0873a0e7b3dd629daec9647282)
+### 4. [SoapUI检查点](http://note.youdao.com/noteshare?id=a85fa31676a238302617d63845ba6f40)
+### 5. [跨级别传递参数](http://note.youdao.com/noteshare?id=821320f7e8362f149b8bc8ff5cdabfdb)
+### 6. [SoapUI自定义MockResponse](http://note.youdao.com/noteshare?id=084f5bf39780db6b080d5ba22eba312f)
