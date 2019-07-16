@@ -13,7 +13,7 @@ details of the two main paragraphs.
 1. waste of money when projects fail; expensive(scientists, facilities, equipment); no benefit to normal people; politicans showing power; risk of accidents deaths e.g. Challenger space shuttle
 2. cheaper e.g. doctors, teachers and police instead of astronauts; public services impact on everyone; reduce poverty; better quality of life; we all use schools, hospitals, police, roads etc. 
 ***
-####ESSAY
+#### ESSAY
 **Governments** in some countries spend large amounts of money on space exploration programmes. **I** completely agree with the idea that these are a waste of money, and that the funds should be allocated to public services.
 (36 words)
 
