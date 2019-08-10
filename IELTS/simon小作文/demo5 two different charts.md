@@ -1,3 +1,7 @@
+**QUESTION**
+![](../images/two_charts.png)
+**ESSAY**
+***
 **The** bar chart compares the numbers of males and females who took four different evening classes in 2009, and the pie chart shows the age profile of these attendees.
 ***
 **It** is clear that significantly more women than men attended evening classes at the education centre. **We** can also see that evening courses were much more popular among older adults.

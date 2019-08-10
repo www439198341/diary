@@ -1,3 +1,7 @@
+**QUESTION**
+![](../images/comparison.png)
+**ESSAY**
+***
 **The** two pictures compare the current layout of the ground floor of a house with a plan to redesign the same living space.
 ***
 **We** can see that the new design proposal involves making a number of changes to the ground floor of the house, mainly in the central hall area. **There** are no plans to change external walls or entrances.

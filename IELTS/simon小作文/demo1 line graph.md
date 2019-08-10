@@ -1,3 +1,7 @@
+**QUESTION**
+![](../images/line_graph.png)
+**ESSAY**
+***
 **The** line graph compares the amount of electricity produced in France using four different sources of power over a period of 32 years.
 ***
 **It** is clear that nuclear power was by far the most important means of electricity generation over the period shown. **Renewables** provided the lowest amount of electricity in each year.

@@ -1,3 +1,7 @@
+**QUESTION**
+![](../images/process.png)
+**ESSAY**
+***
 **The** first flow diagram illustrates the process of glass container production, and the second diagram shows steps in the process of recycling used glass.
 ***
 **We** can see that glass is made using three main raw materials, and that the manufacturing process consists of four distinct stages. **It** requires five steps to turn used glass into new glass products.

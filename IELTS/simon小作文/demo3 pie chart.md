@@ -1,3 +1,7 @@
+**QUESTION**
+![](../images/pie_chart.png)
+**ESSAY**
+***
 **The** pie chart compare five catigories of household expenditure in the UK and New Zealand in the years 1980 and 2008.
 ***
 **It** is noticeable that the proportion of spending on food and drink fell in both contries over the 28-year period, while spending on utility bills rose. **Also**, UK residents spent a significantly larger percentage of their household budgets on leisure than their New Zealand counterparts.

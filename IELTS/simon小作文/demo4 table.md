@@ -1,3 +1,7 @@
+**QUESTION**
+![](../images/table.png)
+**ESSAY**
+***
 **The** table compares the five highest ranking countries in terms of numbers of visits and the money spent by tourists over a period of two years.
 ***
 **It** is clear that France was the world's most popular tourist destination in the years 2012 and 2013. **However**, the USA earned by far the most revenue from tourism over the same period.

@@ -1,3 +1,7 @@
+**QUESTION**
+![](../images/bar_chart.png)
+**ESSAY**
+***
 **The** bar chart compares the number of mobile phones sold worldwide by the five most popular manufacutres in the year 2009, 2011 and 2013.
 ***
 **It** is clear that Nokia sold the most mobile phones between 2009 and 2011, but Samsung became the best selling brand in 2013. **Samsung** and Apple saw the biggest rises in sales over the 5-year period.
