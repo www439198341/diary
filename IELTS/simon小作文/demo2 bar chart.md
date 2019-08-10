@@ -1,4 +1,3 @@
-**QUESTION**
 ![](../images/bar_chart.png)
 **ESSAY**
 ***

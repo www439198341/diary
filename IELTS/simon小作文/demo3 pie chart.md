@@ -1,4 +1,3 @@
-**QUESTION**
 ![](../images/pie_chart.png)
 **ESSAY**
 ***

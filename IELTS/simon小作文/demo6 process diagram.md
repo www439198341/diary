@@ -1,4 +1,3 @@
-**QUESTION**
 ![](../images/process.png)
 **ESSAY**
 ***

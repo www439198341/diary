@@ -1,4 +1,3 @@
-**QUESTION**
 ![](../images/two_charts.png)
 **ESSAY**
 ***

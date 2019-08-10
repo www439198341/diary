@@ -1,4 +1,3 @@
-**QUESTION**
 ![](../images/line_graph.png)
 **ESSAY**
 ***

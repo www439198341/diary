@@ -1,4 +1,3 @@
-**QUESTION**
 ![](../images/table.png)
 **ESSAY**
 ***
