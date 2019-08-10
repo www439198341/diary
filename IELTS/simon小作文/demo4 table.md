@@ -1,4 +1,4 @@
-![](../images/table.png)
+![](../images/table.png)  
 **ESSAY**
 ***
 **The** table compares the five highest ranking countries in terms of numbers of visits and the money spent by tourists over a period of two years.

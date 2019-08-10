@@ -1,4 +1,4 @@
-![](../images/comparison.png)
+![](../images/comparison.png)  
 **ESSAY**
 ***
 **The** two pictures compare the current layout of the ground floor of a house with a plan to redesign the same living space.

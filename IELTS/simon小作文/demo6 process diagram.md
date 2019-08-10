@@ -1,4 +1,4 @@
-![](../images/process.png)
+![](../images/process.png)  
 **ESSAY**
 ***
 **The** first flow diagram illustrates the process of glass container production, and the second diagram shows steps in the process of recycling used glass.

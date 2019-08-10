@@ -1,4 +1,4 @@
-![](../images/pie_chart.png)
+![](../images/pie_chart.png)  
 **ESSAY**
 ***
 **The** pie chart compare five catigories of household expenditure in the UK and New Zealand in the years 1980 and 2008.

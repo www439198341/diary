@@ -1,4 +1,4 @@
-![](../images/bar_chart.png)
+![](../images/bar_chart.png)  
 **ESSAY**
 ***
 **The** bar chart compares the number of mobile phones sold worldwide by the five most popular manufacutres in the year 2009, 2011 and 2013.

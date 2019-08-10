@@ -1,4 +1,4 @@
-![](../images/two_charts.png)
+![](../images/two_charts.png)  
 **ESSAY**
 ***
 **The** bar chart compares the numbers of males and females who took four different evening classes in 2009, and the pie chart shows the age profile of these attendees.
