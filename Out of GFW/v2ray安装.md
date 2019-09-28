@@ -1,7 +1,7 @@
-1. [v2ray安装教程汇总](https://v2ray6.com/post/1/)
+1. [v2ray安装教程汇总](https://233blog.com/)
 2. 服务端安装：
 - sudo -i
-- bash <(curl -s -L https://v2ray6.com/v2ray.sh)
+- bash <(curl -s -L https://233v2.com/v2ray.sh)
 
 3. 客户端安装（windows）
 - 客户端[下载地址](https://github.com/2dust/v2rayN/releases/latest)
