@@ -1,5 +1,7 @@
-## 1. 安装django-rest-swagger
-
+## 1. 安装
+```
+django-rest-swagger
+```
 ## 2. 配置项目/settings
 ```
 INSTALLED_APPS = [
@@ -12,8 +14,9 @@ INSTALLED_APPS = [
 REST_FRAMEWORK = [
   'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.AutoSAchema'
 ]
-
+```
 ## 3. 配置项目/urls
+```
 from rest_framework.schemas import get_schema_view
 from rest_framework_swagger.renderers import SwaggerUIRenderer, OpenAPIRenderer
 
@@ -49,7 +52,7 @@ def api1_name(request):
   })
 ```
 ```
-@类形式
+# 类形式
 from rest_framework.views import APIView
 from rest_framework.response import Response
 class MyApi(APIView):  # 继承APIView，而不是继承默认的View
