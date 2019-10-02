@@ -11,9 +11,9 @@ INSTALLED_APPS = [
   'other apps',
 ]
 
-REST_FRAMEWORK = [
+REST_FRAMEWORK = {
   'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.AutoSAchema'
-]
+}
 ```
 ## 3. 配置项目/urls
 ```
