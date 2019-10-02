@@ -67,3 +67,7 @@ class MyApi(APIView):  # 继承APIView，而不是继承默认的View
       'myapi': 'myapi'
     })
 ```
+## 5. 注意
+  - 1.views中，必须有可展示的接口，否则swagger会报错。其报错信息为“没有权限”
+  - 2.post请求，参数位置设为query。此时swagger用curl发起请求时，参数是和get方式一样写在url中的，服务端必须用GET方法获取请求参数。
+  - 3.urls文件中的get_schema_view方法，会自动过滤符合条件的接口地址，其他接口不会显示在swagger中。
