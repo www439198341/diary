@@ -126,7 +126,8 @@ class UserConfig(AppConfig):
     verbose_name = '用户管理'
 # 2.在app下的__init__.py文件中写入默认配置
 default_app_config = 'users.apps.UserConfig'
-
+```
+# 正式项目一定提前考虑好用户模型，可以多设置几个备用字段。一旦初始化数据库之后，不能修改默认的用户模型，除非重建数据库，导致数据丢失。
 
 
 
