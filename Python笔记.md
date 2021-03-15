@@ -20,3 +20,13 @@ turtle.done()
 ### 4. PyAutoGUI模块，模拟键鼠动作
 
 ### 5. tkinter模块，开发GUI
+
+### 6. 8位16进制转小数类型
+```
+import binascii
+import struct
+
+h = '295c8fc2f528f03f'
+value = str(struct.unpack('<d', binascii.unhexlify(h))[0])
+# value = 1.01
+```
