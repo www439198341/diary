@@ -13,7 +13,7 @@ import socks
 WEB_SPEED = 5
 DOWNLOAD_SPEED = 150000
 TIME_LIMIT = 5
-WAIT_RESTART = 10
+WAIT_RESTART = 1
 template = {
     "vmess": {
         "policy": {
@@ -670,6 +670,25 @@ template = {
 }
 
 
+def gen_update_time(str_time):
+    json_content = {'v': '', 'ps': '更新于:%s - by Flynn' % str_time, 'add': '', 'port': '', 'id': '', 'aid': '',
+                    'net': '', 'type': '', 'host': '', 'path': '', 'tls': '', 'sni': ''}
+    str_content = json.dumps(json_content)
+    link_with_update_time = str(b'vmess://' + base64.b64encode(str_content.encode('utf-8')), encoding='utf-8')
+    return link_with_update_time
+
+
+def print_with_color(color: str, content):
+    if color.lower() == 'green':
+        print('\033[92m' + content + '\033[0m')
+    elif color.lower() == 'red':
+        print('\033[91m' + content + '\033[0m')
+    elif color.lower() == 'yellow':
+        print('\033[93m' + content + '\033[0m')
+    else:
+        print(content)
+
+
 def read_vmess(splited_url):
     try:
         url_netloc = splited_url.netloc
@@ -830,13 +849,11 @@ def read_vless(splited_url):
 
 
 def get_share_links(return_content):
-    print('call method get_share_links')
     share_links = b64decode(return_content).decode('utf-8').splitlines()
     return share_links
 
 
 def read_content(share_links) -> dict:
-    print('call method read_content')
     link_with_config = {}
     for share_link in share_links:
         url_split = urlsplit(share_link)
@@ -855,7 +872,7 @@ def read_content(share_links) -> dict:
 
 
 def set_config(config: dict, config_file='/volume1/docker/v2ray/config.json'):
-    print('set config and restart v2ray')
+    print_with_color('yellow', 'set config and restart v2ray')
     if config:
         protocol = config.get('protocol')
         temp = template.get(protocol)
@@ -867,12 +884,13 @@ def set_config(config: dict, config_file='/volume1/docker/v2ray/config.json'):
         output = json.dumps(temp, indent=True, sort_keys=True)
         with open(config_file, 'w') as f:
             f.write(output)
-        os.popen('docker restart v2ray')
+        r = os.popen('docker restart v2ray')
+        r.read()
         time.sleep(WAIT_RESTART)
 
 
 def get_web_speed():
-    print('testing web speed ...')
+    print_with_color('yellow', 'testing web speed ...')
     start = time.time()
     socks.setdefaultproxy(socks.SOCKS5, '127.0.0.1', 2333)
     socket.socket = socks.socksocket
@@ -887,7 +905,7 @@ def get_web_speed():
 
 
 def get_download_speed():
-    print('testing download speed ...')
+    print_with_color('yellow', 'testing download speed ...')
     cmd = 'curl -m' + str(
         TIME_LIMIT) + ' -x socks5://127.0.0.1:2333 -Lo /dev/null -skw "%{speed_download}\n" http://cachefly.cachefly.net/10mb.test'
     p = os.popen(cmd)
@@ -899,38 +917,42 @@ def get_download_speed():
 
 
 def get_best_config(share_links) -> dict:
-    print('call method get_best_config')
     link_with_config = read_content(share_links)
     best_links = {}
+    total_config_number = len(link_with_config)
+    i = 0
     for link, config in link_with_config.items():
+        print_with_color('red', 'testing config %s/%s' % (i, total_config_number))
         set_config(config)
         web_speed = get_web_speed()
         if web_speed < WEB_SPEED:
-            print(web_speed)
+            print_with_color('yellow', 'web_speed--> %s' % web_speed)
             download_speed = get_download_speed()
             if download_speed > DOWNLOAD_SPEED:
-                print(download_speed)
-                print('\033[92m' + 'found a fast link, add to best_links' + link + '\033[0m')
+                print_with_color('yellow', 'download_speed--> %s' % download_speed)
+                print_with_color('green', 'found a fast link, add to best_links--> %s' % link)
                 best_links[link] = download_speed
+        i += 1
     return best_links
 
 
 def gen_subscribe(urls, n):
-    print('call method gen_subscribe')
+    start_time = time.strftime("%m-%d %H:%M", time.localtime())
     share_links = []
     for url in urls:
         share_links += get_share_links(get_return_content(url))
 
     best_links = get_best_config(share_links)
     sorted_links = sorted(best_links.items(), key=lambda item: item[1], reverse=True)[:n]
-
-    link_str = '\n'.join(link[0] for link in sorted_links)
+    end_time = time.strftime("%m-%d %H:%M", time.localtime())
+    link_str = '%s\n' % gen_update_time('start:%s;end:%s' % (start_time, end_time)) + '\n'.join(
+        link[0] for link in sorted_links)
     link_b64 = base64.b64encode(link_str.encode('utf-8'))
     return link_b64
 
 
 def set_default_v2ray():
-    print('call method set_default_v2ray')
+    print_with_color('yellow', 'call method set_default_v2ray')
     bwg = {
         "protocol": "vmess",
         "settings": {
@@ -957,22 +979,20 @@ def set_default_v2ray():
 
 
 def get_return_content(url):
-    print('call method get_return_content')
     if 'api.github.com' in url:
         tmp = requests.get(url).json().get('content')
         return b64decode(tmp).decode('utf-8')
     return urlopen(url).read()
 
 
-def main():
-    print('call method main')
+def main(link_num=10):
     set_default_v2ray()
     urls = [
         'https://api.github.com/repos/adiwzx/freenode/contents/adispeed.txt',
         'https://api.github.com/repos/freefq/free/contents/v2',
         'https://iwxf.netlify.app'
     ]
-    c = gen_subscribe(urls, 10)
+    c = gen_subscribe(urls, link_num)
     print(c)
     with open('/volume1/docker/nginx/v2.txt', 'w') as f:
         f.write(str(c, encoding='utf-8'))
